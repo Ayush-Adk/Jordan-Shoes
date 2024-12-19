@@ -1,0 +1,334 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Button Base */
+.btn {
+    background-color: #ff5733;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2; /* Ensure text is vertically aligned */
+}
+
+.btn:hover {
+    background-color: #e84a2d;
+    transform: scale(1.05);
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header (Home Page Hero) */
+header {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: crazyEntrance 3s ease-in-out;
+}
+
+header h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: bold;
+    animation: textBounce 2s ease;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    opacity: 0.9;
+    animation: fadeInText 2s ease-in-out;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Animations */
+@keyframes crazyEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textBounce {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Card Styling (Products Page) */
+/* Styling for the product cards */
+.card {
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    width: 250px; 
+    margin: 15px; 
+    display: inline-block; 
+    vertical-align: top; 
+}
+
+
+.card img {
+    width: 100%; 
+    height: 130px;
+   
+    object-fit: cover; 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effects for the card */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+
+.card-title {
+    font-size: 1.5rem;
+    color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; 
+}
+
+
+.card-text {
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 20px; 
+}
+
+
+/* History Section - Timeline */
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 40px 20px;
+    margin: 40px 0;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.timeline li {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #ff5733;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline li:hover {
+    transform: translateX(10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timeline .date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline li h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.timeline li p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+form {
+    background: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    animation: formSlide 1s ease-out;
+    font-family: 'Arial', sans-serif;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff5733;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 87, 51, 0.5);
+}
+
+/* Contact Form Button */
+form button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+form button:hover {
+    background-color: #e84a2d;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes formSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    
+}
+/* Responsive Breakpoints */
+
+/* Small screens (320px - 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .card-container {
+        justify-content: space-between;
+    }
+}
+
+/* Small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    .card {
+        max-width: 300px;
+    }
+}
+
+/* Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    header h1 {
+        font-size: 4rem;
+    }
+    .card-container {
+        padding: 40px;
+    }
+}
+
+/* Large screens (1441px - 2000px) */
+@media (min-width: 1441px) {
+    header h1 {
+        font-size: 5rem;
+    }
+    .card-container {
+        justify-content: center;
+    }
+    .card {
+        max-width: 350px;
+    }
+}
